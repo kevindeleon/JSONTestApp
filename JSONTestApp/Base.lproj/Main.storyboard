@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1hv-Wa-PDT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="wwI-M0-brG">
+            <objects>
+                <viewController id="qeG-ek-7db" customClass="DetailViewController" customModule="JSONTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KUI-SU-oQV"/>
+                        <viewControllerLayoutGuide type="bottom" id="sK6-0C-o7G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTB-M5-VCP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-HG-Itb">
+                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HcU-HG-Itb" firstAttribute="top" secondItem="qTB-M5-VCP" secondAttribute="top" constant="20" symbolic="YES" id="4XD-hd-Hkw"/>
+                            <constraint firstItem="HcU-HG-Itb" firstAttribute="leading" secondItem="qTB-M5-VCP" secondAttribute="leading" id="7aR-od-y8K"/>
+                            <constraint firstAttribute="trailing" secondItem="HcU-HG-Itb" secondAttribute="trailing" id="fUx-UQ-9u3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HcU-HG-Itb" secondAttribute="bottom" constant="-20" id="ocq-hx-abo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="HcU-HG-Itb" id="gF8-s3-ZQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuL-Yv-kQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="976"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NFB-DV-qoh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1hv-Wa-PDT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQA-Jq-dWu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QsV-sq-Ca8" kind="relationship" relationship="rootViewController" id="ZhC-xk-ayu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utz-le-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="976"/>
+        </scene>
+        <!--Main List Controller-->
+        <scene sceneID="0VG-MS-Qeg">
+            <objects>
+                <tableViewController id="QsV-sq-Ca8" customClass="MainListController" customModule="JSONTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QTi-kC-3c3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rSB-DL-iBs">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSB-DL-iBs" id="oHu-cY-dba">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qeG-ek-7db" kind="show" id="H0N-og-UqF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QsV-sq-Ca8" id="cpu-gx-Vu7"/>
+                            <outlet property="delegate" destination="QsV-sq-Ca8" id="7Cr-Gr-Fqm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8qm-R6-dUM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4IN-u8-gNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="977"/>
+        </scene>
+    </scenes>
+</document>
