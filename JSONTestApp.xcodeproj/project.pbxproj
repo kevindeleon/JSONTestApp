@@ -60,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3BE6531B265846003A0CFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A9219AA1B1FF8CB00D27646 /* Repository.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0A3BE6541B265B00003A0CFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4CAB81B224B8B0047CCF8 /* DetailViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		0A92197C1B1FF33C00D27646 = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +97,10 @@
 		0A9219871B1FF33C00D27646 /* JSONTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A3BE6541B265B00003A0CFA /* Views */,
+				0A3BE6531B265846003A0CFA /* Models */,
 				0AC4CAF01B22A5DA0047CCF8 /* MainListController.swift */,
-				0A9219AA1B1FF8CB00D27646 /* Repository.swift */,
 				0A92198A1B1FF33C00D27646 /* AppDelegate.swift */,
-				0AC4CAB81B224B8B0047CCF8 /* DetailViewController.swift */,
 				0A92198E1B1FF33C00D27646 /* Main.storyboard */,
 				0A9219911B1FF33C00D27646 /* Images.xcassets */,
 				0A9219931B1FF33C00D27646 /* LaunchScreen.xib */,

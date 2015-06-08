@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
 		var repoRequest = NSURLRequest(URL: repoURL!)
 
 		webView.loadRequest(repoRequest)
+		self.title = currentRepo?.name
 	}
 
     override func didReceiveMemoryWarning() {
