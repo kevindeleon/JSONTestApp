@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
 
 	@IBOutlet weak var webView: UIWebView!
 	
+	@IBOutlet weak var webActivity: UIActivityIndicatorView!
+	
 	var currentRepo: Repository?
 	
     override func viewDidLoad() {
@@ -24,7 +26,15 @@ class DetailViewController: UIViewController {
 		webView.loadRequest(repoRequest)
 		self.title = currentRepo?.name
 	}
-
+	
+	func webViewDidStartLoad(webView: UIWebView) {
+		webActivity.startAnimating()
+	}
+	
+	func webViewDidFinishLoad(webView: UIWebView) {
+		webActivity.stopAnimating()
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

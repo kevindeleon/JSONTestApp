@@ -21,17 +21,27 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qeG-ek-7db" id="Aey-Gr-85r"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="C5R-I5-LD1">
+                                <rect key="frame" x="281" y="301" width="37" height="37"/>
+                                <color key="color" red="1" green="0.58738783721221899" blue="0.93689704142644459" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HcU-HG-Itb" firstAttribute="top" secondItem="qTB-M5-VCP" secondAttribute="top" constant="20" symbolic="YES" id="4XD-hd-Hkw"/>
                             <constraint firstItem="HcU-HG-Itb" firstAttribute="leading" secondItem="qTB-M5-VCP" secondAttribute="leading" id="7aR-od-y8K"/>
+                            <constraint firstItem="C5R-I5-LD1" firstAttribute="centerX" secondItem="HcU-HG-Itb" secondAttribute="centerX" id="8Hk-a5-Oga"/>
+                            <constraint firstItem="C5R-I5-LD1" firstAttribute="centerY" secondItem="HcU-HG-Itb" secondAttribute="centerY" id="9zA-Cm-VQQ"/>
                             <constraint firstAttribute="trailing" secondItem="HcU-HG-Itb" secondAttribute="trailing" id="fUx-UQ-9u3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="HcU-HG-Itb" secondAttribute="bottom" constant="-20" id="ocq-hx-abo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="webActivity" destination="C5R-I5-LD1" id="fZO-MC-veJ"/>
                         <outlet property="webView" destination="HcU-HG-Itb" id="gF8-s3-ZQX"/>
                     </connections>
                 </viewController>
@@ -57,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="185" y="976"/>
         </scene>
-        <!--Main List Controller-->
+        <!--Repositories-->
         <scene sceneID="0VG-MS-Qeg">
             <objects>
                 <tableViewController id="QsV-sq-Ca8" customClass="MainListController" customModule="JSONTestApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +91,7 @@
                             <outlet property="delegate" destination="QsV-sq-Ca8" id="7Cr-Gr-Fqm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8qm-R6-dUM"/>
+                    <navigationItem key="navigationItem" title="Repositories" id="8qm-R6-dUM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IN-u8-gNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
